@@ -1,33 +1,59 @@
-<build>
-  <plugins>
-    <!-- Plugin WAR đã có -->
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-war-plugin</artifactId>
-      <version>3.3.2</version>
-    </plugin>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-    <!-- THÊM PLUGIN NÀY VÀO -->
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-dependency-plugin</artifactId>
-      <version>3.2.0</version>
-      <executions>
-        <execution>
-          <phase>package</phase>
-          <goals><goal>copy</goal></goals>
-          <configuration>
-            <artifactItems>
-              <artifactItem>
-                <groupId>com.heroku</groupId>
-                <artifactId>webapp-runner</artifactId>
-                <version>9.0.52.1</version>
-                <destFileName>webapp-runner.jar</destFileName>
-              </artifactItem>
-            </artifactItems>
-          </configuration>
-        </execution>
-      </executions>
-    </plugin>
-  </plugins>
-</build>
+  <!-- THÔNG TIN CƠ BẢN CỦA PROJECT -->
+  <groupId>com.example</groupId>
+  <artifactId>web-project-render</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <!-- CẤU HÌNH BUILD -->
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <!-- CÁC THƯ VIỆN CẦN THIẾT -->
+  <dependencies>
+    <!-- Thư viện Servlet API -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Thư viện JSP API -->
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>javax.servlet.jsp-api</artifactId>
+      <version>2.3.3</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Thư viện JSTL (cho Expression Language) -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+  </dependencies>
+
+  <!-- CÁCH BUILD PROJECT -->
+  <build>
+    <finalName>ROOT</finalName> <!-- Đặt tên file WAR là ROOT.war -->
+    <plugins>
+      <!-- Plugin để build file WAR -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
