@@ -5,6 +5,9 @@
 # =================================================================
 FROM maven:3.9-eclipse-temurin-17 AS build
 
+# TĂNG BỘ NHỚ CHO MAVEN LÊN 512MB
+ENV MAVEN_OPTS="-Xmx512m"
+
 # Tạo một thư mục làm việc bên trong image
 WORKDIR /app
 
