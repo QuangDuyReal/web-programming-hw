@@ -5,14 +5,13 @@
 # =================================================================
 FROM maven:3.9-eclipse-temurin-17 AS build
 
-# TĂNG BỘ NHỚ CHO MAVEN LÊN 512MB
-ENV MAVEN_OPTS="-Xmx512m"
+# TĂNG BỘ NHỚ CHO MAVEN LÊN 1024MB (1GB)
+ENV MAVEN_OPTS="-Xmx1024m"
 
 # Tạo một thư mục làm việc bên trong image
 WORKDIR /app
 
 # Copy các file pom.xml vào trước để tận dụng cache của Docker
-# Nếu các file pom không thay đổi, Docker sẽ không cần tải lại dependency
 COPY pom.xml .
 COPY ch07_ex1_down/pom.xml ./ch07_ex1_down/
 COPY musicStore/pom.xml ./musicStore/
@@ -41,7 +40,6 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 # Copy file .war đã được build ở giai đoạn 1 vào thư mục webapps của Tomcat
 # --from=build -> chỉ định lấy file từ giai đoạn "build" ở trên
 # Đổi tên file war thành ROOT.war để nó chạy ở đường dẫn gốc "/"
-#hehehe
 COPY --from=build /app/ch07_ex1_down/target/ch07_ex1_down.war /usr/local/tomcat/webapps/ROOT.war
 
 # Lệnh để khởi động server Tomcat khi container chạy
