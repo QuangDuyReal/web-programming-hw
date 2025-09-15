@@ -22,23 +22,23 @@
         </tr>
         <tr>
             <td>ĐỪNG LÀM TRÁI TIM ANH ĐAU</td>
-            <td><a href="{pageContext.request.contextPath}/sound/sky/dunglamtraitimanhdau.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/sky/dunglamtraitimanhdau.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>NƠI NÀY CÓ ANH</td>
-            <td><a href="{pageContext.request.contextPath}/sound/sky/noinaycoanh.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/sky/noinaycoanh.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>BUÔNG ĐÔI TAY NHAU RA</td>
-            <td><a href="{pageContext.request.contextPath}/sound/sky/buongdoitaynhaura.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/sky/buongdoitaynhaura.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>HÃY TRAO CHO ANH</td>
-            <td><a href="{pageContext.request.contextPath}/sound/sky/haytraochoanh.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/sky/haytraochoanh.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>CHẠY NGAY ĐI</td>
-            <td><a href="{pageContext.request.contextPath}/sound/sky/chayngaydi.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/sky/chayngaydi.mp3">MP3</a></td>
         </tr>
     </table>
 

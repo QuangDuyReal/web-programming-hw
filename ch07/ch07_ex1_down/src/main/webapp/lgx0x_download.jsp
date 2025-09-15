@@ -22,15 +22,15 @@
         </tr>
         <tr>
             <td>Tán gái 101</td>
-            <td><a href="{pageContext.request.contextPath}/sound/lgx0x/tg101.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/lgx0x/tg101.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>Tán gái 202</td>
-            <td><a href="{pageContext.request.contextPath}/sound/lgx0x/tg202.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/lgx0x/tg202.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>Tán gái 303</td>
-            <td><a href="{pageContext.request.contextPath}/sound/lgx0x/tg303.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/lgx0x/tg303.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>Tán gái 404</td>
@@ -38,19 +38,19 @@
         </tr>
         <tr>
             <td>Tán gái 505</td>
-            <td><a href="{pageContext.request.contextPath}/sound/lgx0x/tg505.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/lgx0x/tg505.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>Tán gái 606</td>
-            <td><a href="{pageContext.request.contextPath}/sound/lgx0x/tg606">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/lgx0x/tg606">MP3</a></td>
         </tr>
         <tr>
             <td>Tán gái 707</td>
-            <td><a href="{pageContext.request.contextPath}/sound/lgx0x/tg707">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/lgx0x/tg707">MP3</a></td>
         </tr>
         <tr>
             <td>Tán gái 808</td>
-            <td><a href="{pageContext.request.contextPath}/sound/lgx0x/simpgai808.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/lgx0x/simpgai808.mp3">MP3</a></td>
         </tr>
     </table>
 

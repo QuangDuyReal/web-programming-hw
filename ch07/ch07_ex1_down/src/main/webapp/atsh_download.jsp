@@ -30,19 +30,19 @@
         </tr>
         <tr>
             <td>TRÌNH</td>
-            <td><a href="{pageContext.request.contextPath}/sound/atsh/trinh.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/atsh/trinh.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>KIM PHÚT KIM GIỜ</td>
-            <td><a href="{pageContext.request.contextPath}/sound/atsh/kimphutkimgio.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/atsh/kimphutkimgio.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>CHÂN THÀNH</td>
-            <td><a href="{pageContext.request.contextPath}/sound/atsh/chanthanh.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/atsh/chanthanh.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>HÀO QUANG</td>
-            <td><a href="{pageContext.request.contextPath}/sound/atsh/haoquang.mp3">MP3</a></td>
+            <td><a href="${pageContext.request.contextPath}/sound/atsh/haoquang.mp3">MP3</a></td>
         </tr>
     </table>
 
