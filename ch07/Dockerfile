@@ -38,6 +38,7 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 # Copy file .war đã được build ở giai đoạn 1 vào thư mục webapps của Tomcat
 # --from=build -> chỉ định lấy file từ giai đoạn "build" ở trên
 # Đổi tên file war thành ROOT.war để nó chạy ở đường dẫn gốc "/"
+#hehehe
 COPY --from=build /app/ch07_ex1_down/target/ch07_ex1_down.war /usr/local/tomcat/webapps/ROOT.war
 
 # Lệnh để khởi động server Tomcat khi container chạy
