@@ -1,4 +1,5 @@
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,19 +22,19 @@
         </tr>
         <tr>
             <td>LẦN CUỐI</td>
-            <td><a href="/musicStore/sound/sweet/lancuoi.mp3">MP3</a></td>
+            <td><a href="{pageContext.request.contextPath}/sound/sweet/lancuoi.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>THẤY CHƯA EM</td>
-            <td><a href="/musicStore/sound/sweet/thaychua.mp3">MP3</a></td>
+            <td><a href="{pageContext.request.contextPath}/sound/sweet/thaychua.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>CHO</td>
-            <td><a href="/musicStore/sound/sweet/cho.mp3">MP3</a></td>
+            <td><a href="{pageContext.request.contextPath}/sound/sweet/cho.mp3">MP3</a></td>
         </tr>
         <tr>
             <td>TRƯỚC KHI EM TỒN TẠI</td>
-            <td><a href="/musicStore/sound/sweet/truockhiemtontai.mp3">MP3</a></td>
+            <td><a href="{pageContext.request.contextPath}/sound/sweet/truockhiemtontai.mp3">MP3</a></td>
         </tr>
     </table>
 
