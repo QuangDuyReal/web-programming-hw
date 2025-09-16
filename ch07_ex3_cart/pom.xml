@@ -45,6 +45,7 @@
     </dependencies>
 
     <build>
+        <finalName>ch07_ex3_cart</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
