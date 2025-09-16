@@ -1,16 +1,30 @@
-# Sử dụng image chính thức của Tomcat 9 với JDK 11 (phiên bản phổ biến và ổn định)
+# ----- GIAI ĐOẠN 1: BUILD PROJECT VỚI MAVEN -----
+# Sử dụng image có sẵn Maven và JDK 11 để làm "môi trường build"
+FROM maven:3.8-openjdk-11 AS builder
+
+# Tạo thư mục làm việc trong image
+WORKDIR /app
+
+# Sao chép toàn bộ source code của bạn vào thư mục /app
+COPY . .
+
+# Chạy lệnh Maven để build và tạo ra file .war trong thư mục /app/target
+RUN mvn clean package
+
+
+# ----- GIAI ĐOẠN 2: TẠO IMAGE TOMCAT CUỐI CÙNG -----
+# Sử dụng image Tomcat 9 làm image cuối cùng để chạy ứng dụng
 FROM tomcat:9.0-jdk11-temurin
 
-# Xóa các ứng dụng web mặc định của Tomcat để dọn dẹp
+# Dọn dẹp các ứng dụng mặc định của Tomcat
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-# Thay thế 'your-app.war' bằng tên file .war thực tế của bạn
-# File .war này cần nằm trong cùng thư mục với Dockerfile hoặc bạn cần chỉ đúng đường dẫn
-# Việc đổi tên thành ROOT.war giúp ứng dụng chạy tại địa chỉ gốc (ví dụ: http://localhost:8080/)
-COPY target/ch07_ex3_cart.war /usr/local/tomcat/webapps/ROOT.war
+# Sao chép file .war đã được build ở GIAI ĐOẠN 1 vào thư mục webapps của Tomcat
+# Docker sẽ tự động lấy file từ image "builder" ở trên
+COPY --from=builder /app/target/ch07_ex3_cart.war /usr/local/tomcat/webapps/ROOT.war
 
-# Cổng mặc định mà Tomcat lắng nghe
+# Cổng mặc định
 EXPOSE 8080
 
-# Lệnh để khởi động Tomcat server khi container chạy
+# Lệnh khởi động Tomcat
 CMD ["catalina.sh", "run"]
