@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>ch07_ex3_cart</name>
     <packaging>war</packaging>
-
+<!--temp-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>17</maven.compiler.target>
