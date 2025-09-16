@@ -14,7 +14,7 @@ RUN mvn clean package
 
 # ----- GIAI ĐOẠN 2: TẠO IMAGE TOMCAT CUỐI CÙNG -----
 # Giữ nguyên image Tomcat này vì nó tương thích tốt
-FROM tomcat:9.0-jdk11-temurin
+FROM tomcat:9.0-jdk17-temurin
 
 # Dọn dẹp các ứng dụng mặc định của Tomcat
 RUN rm -rf /usr/local/tomcat/webapps/*
