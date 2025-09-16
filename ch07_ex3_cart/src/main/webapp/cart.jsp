@@ -21,7 +21,7 @@
                 <td>
                     <form action="cart" method="post">
                         <input type="hidden" name="productCode" value="${item.product.code}">
-                        <input type=text name="quantity" value="${item.quantity}" id="quantity">
+                        <input type="text" name="quantity" value="${item.quantity}" id="quantity">
                         <input type="submit" value="Update">
                     </form>
                 </td>
