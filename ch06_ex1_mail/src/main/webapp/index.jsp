@@ -34,7 +34,6 @@
                 <button type="submit" class="btn-submit">Join Now</button>
             </form>
         </div>
-        <p class="copyright">© Copyright ${currentYear} Mike Murach &amp; Associates</p>
     </div>
 </div>
 
