@@ -3,18 +3,14 @@
     <Resource name="jdbc/murach_sql"
               auth="Container"
               type="javax.sql.DataSource"
-
-
-    maxTotal="20"
-    maxIdle="10"
-    maxWaitMillis="5000"
-    validationQuery="SELECT 1"
-    testOnBorrow="true"
-
-
-    username="${DB_USER}"
-    password="${DB_PASSWORD}"
-    driverClassName="org.postgresql.Driver"
-    url="jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="5000"
+              validationQuery="SELECT 1"
+              testOnBorrow="true"
+              username="${DB_USER}"
+              password="${DB_PASSWORD}"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}"
     />
 </Context>
