@@ -32,7 +32,7 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 # Quan trọng: Đổi tên file .war thành ROOT.war.
 # Điều này giúp ứng dụng của bạn chạy ở URL gốc (ví dụ: https://my-app.onrender.com/)
 # thay vì (https://my-app.onrender.com/ch12_sqlGateway/)
-COPY --from=builder /app/target/ch12_sqlGateway.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=builder /app/target/ch12_ex1_sqlGateway.war /usr/local/tomcat/webapps/ROOT.war
 
 # Port mà Tomcat lắng nghe mặc định
 EXPOSE 8080
