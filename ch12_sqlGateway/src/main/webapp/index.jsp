@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8";
+    <meta charset="utf-8">
     <title>Murach's Java Servlet and JSP</title>
     <link rel="stylesheet" href="styles/main.css" type="text/css">
 </head>
 <body>
 <!--hehe-->
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:if test="${sqlStatemnet ==null}">
+<c:if test="${sqlStatement ==null}">
     <c:set var="sqlStatement" value="SELECT * FROM User"/>
 </c:if>
 
@@ -18,7 +18,7 @@
 <p>Nhập vào câu truy vấn sau đó nhấn vào nút Execute</p>
 <p><b>SQL Statement:</b></p>
 <form action="sqlGateway" method="post">
-    <textarea name="sqlStatement" col="60" row="8"></textarea>
+    <textarea name="sqlStatement" col="60" row="8">${sqlStatement}</textarea>
     <input type="submit" value="Execute">
 </form>
 
