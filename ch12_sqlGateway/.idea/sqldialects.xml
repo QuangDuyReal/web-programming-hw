@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/webapp/sql_scripts/UserTestCreate.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/sql_scripts/UserTestDrop.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/sql_scripts/UsersDelete.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/sql_scripts/UsersInsert.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/sql_scripts/UsersSelect.sql" dialect="GenericSQL" />
+  </component>
+</project>
