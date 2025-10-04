@@ -20,9 +20,9 @@
     <dependencies>
         <!-- 1. MySQL JDBC Driver (Giữ nguyên) -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.28</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.3.1</version>
         </dependency>
 
         <!-- 2. JPA Implementation (Giữ nguyên EclipseLink, nhưng nên dùng bản cũ hơn một chút cho an toàn) -->
@@ -44,6 +44,7 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- 5. Servlet API (QUAY VỀ javax.servlet-api 4.0.1) -->

@@ -28,8 +28,6 @@ FROM tomcat:9.0-jdk17-corretto
 # Xóa các ứng dụng web mặc định của Tomcat để image nhẹ hơn
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-COPY setenv.sh /usr/local/tomcat/bin/
-
 # Copy file .war đã được build ở Stage 1 vào thư mục webapps của Tomcat
 # Docker sẽ tự động giải nén nó khi container khởi động
 COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war

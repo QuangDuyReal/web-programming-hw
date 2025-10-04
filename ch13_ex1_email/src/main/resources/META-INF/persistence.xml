@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="2.1"
+<persistence version="2.2"
              xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
 
     <persistence-unit name="emailListPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>murach.business.User</class> <!-- Thêm dòng này để JPA biết về Entity User -->
+        <class>murach.business.User</class>
         <properties>
-            <!-- Cấu hình kết nối CSDL -->
-            <property name="javax.persistence.jdbc.url" value="${db.url}"/>
-            <property name="javax.persistence.jdbc.user" value="${db.user}"/>
-            <property name="javax.persistence.jdbc.password" value="${db.password}"/>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <!-- 1. Thay đổi Driver Class -->
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
 
-            <!-- Cấu hình EclipseLink để tự động tạo bảng -->
-            <!-- 'drop-and-create' sẽ xóa và tạo lại bảng mỗi khi ứng dụng chạy, rất tiện khi dev -->
-            <!-- Khi deploy thật, bạn nên đổi thành 'none' hoặc 'validate' -->
-            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+            <!-- 2. Thay đổi JDBC URL (Sử dụng thông tin từ Render) -->
+            <!-- Dạng: jdbc:postgresql://<HOST>:<PORT>/<DATABASE_NAME> -->
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:postgresql://dpg-d38ddu3e5dus73a2rjn0-a:5432/murach_sql"/>
+
+            <!-- 3. Điền User và Password từ Render -->
+            <property name="javax.persistence.jdbc.user"
+                      value="murach_sql_user"/>
+            <property name="javax.persistence.jdbc.password"
+                      value="0Zr8HPMJGebieEsA7EtKuhma50rkDYxY"/>
+
+            <!-- 4. THÊM THUỘC TÍNH QUAN TRỌNG: DIALECT -->
+            <!-- Dòng này nói cho EclipseLink biết phải tạo ra câu lệnh SQL theo chuẩn của PostgreSQL -->
+            <property name="eclipselink.target-database" value="PostgreSQL"/>
+
+            <!-- 5. Cấu hình tạo bảng -->
+            <!--
+                Lần đầu deploy, bạn có thể để là "create-tables" để JPA tự tạo bảng "User" cho bạn.
+                Nó sẽ KHÔNG ảnh hưởng đến các bảng của bài tập cũ.
+                Sau khi bảng đã được tạo, hãy đổi lại thành "validate".
+            -->
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
         </properties>
     </persistence-unit>
 </persistence>
