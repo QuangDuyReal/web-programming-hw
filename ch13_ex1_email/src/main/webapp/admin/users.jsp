@@ -41,7 +41,7 @@
 
   <p><a href="${pageContext.request.contextPath}/">Back to Join Page</a></p>
 
-  <p class="footer-credit">Nguyễn Văn Quang Duy - 23110086</p>
+  <p class="footer-credit">Nguyen Van Quang Duy - 23110086</p>
 </div>
 
 </body>

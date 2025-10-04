@@ -57,7 +57,9 @@
             </tbody>
         </table>
     </c:if>
-
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="${pageContext.request.contextPath}/admin/users">Manage Users</a>
+    </div>
     <!-- Yêu cầu: Hiển thị tên và mã số sinh viên -->
     <p class="footer-credit">Nguyen Van Quang Duy - 23110086</p>
 </div>
