@@ -27,8 +27,11 @@
         <td>${user.firstName} ${user.lastName}</td>
         <td>${user.email}</td>
         <td>
-            <%-- TODO: Thêm form cho nút Edit --%>
-          <a href="#">Edit</a>
+          <form action="${pageContext.request.contextPath}/admin/users" method="post">
+            <input type="hidden" name="action" value="display_user_for_edit">
+            <input type="hidden" name="userId" value="${user.userId}">
+            <input type="submit" value="Edit" class="edit-button">
+          </form>
         </td>
         <td>
           <form action="${pageContext.request.contextPath}/admin/users" method="post">
