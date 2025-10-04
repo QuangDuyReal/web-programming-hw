@@ -148,3 +148,32 @@ tbody tr:hover {
     color: #888;
     font-size: 0.9rem;
 }
+
+/* --- Styling for Admin Buttons --- */
+.delete-button, .edit-button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none; /* Cho nút Edit (là thẻ a) */
+    display: inline-block; /* Cho nút Edit (là thẻ a) */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-button {
+    background-color: #dc3545; /* Màu đỏ */
+}
+.delete-button:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+.edit-button {
+    background-color: #007bff; /* Màu xanh dương */
+}
+.edit-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}

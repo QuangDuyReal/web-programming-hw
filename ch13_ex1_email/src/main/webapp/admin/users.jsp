@@ -31,8 +31,11 @@
           <a href="#">Edit</a>
         </td>
         <td>
-            <%-- TODO: Thêm form cho nút Delete --%>
-          <a href="#">Delete</a>
+          <form action="${pageContext.request.contextPath}/admin/users" method="post">
+            <input type="hidden" name="action" value="delete_user">
+            <input type="hidden" name="userId" value="${user.userId}">
+            <input type="submit" value="Delete" class="delete-button">
+          </form>
         </td>
       </tr>
     </c:forEach>
