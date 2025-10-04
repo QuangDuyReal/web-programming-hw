@@ -1,33 +1,44 @@
 package murach.business;
 
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "users") // Chỉ định tên bảng là "users" (chữ thường, số nhiều) - đây là quy ước phổ biến
+@Table(name = "users") // Tên bảng là chữ thường, số nhiều
 public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id") // Đổi từ userId -> user_id
-    private Long userId;
+    @Column(name = "user_id")
+    private Long userId; // Tên biến: userId (camelCase)
 
-    // Giữ nguyên email vì nó đã là chữ thường
     @Column(name = "email")
     private String email;
 
-    @Column(name = "first_name") // Đổi từ firstName -> first_name
-    private String firstName;
+    @Column(name = "first_name")
+    private String firstName; // Tên biến: firstName (camelCase)
 
-    @Column(name = "last_name") // Đổi từ lastName -> last_name
-    private String lastName;
+    @Column(name = "last_name")
+    private String lastName; // Tên biến: lastName (camelCase)
+
+    // Constructor mặc định (JPA yêu cầu)
+    public User() {
+    }
+
+    // Getters và Setters theo đúng quy ước JavaBeans
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
     public String getEmail() {
         return email;
     }
