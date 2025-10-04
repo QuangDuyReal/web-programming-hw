@@ -30,7 +30,7 @@ public class UserDB {
         EntityTransaction trans = em.getTransaction();
         trans.begin();
         try {
-            em.merge(user);
+            em.merge(user); // Dùng merge cho việc cập nhật
             trans.commit();
         } catch (Exception e) {
             System.out.println(e);
@@ -45,6 +45,7 @@ public class UserDB {
         EntityTransaction trans = em.getTransaction();
         trans.begin();
         try {
+            // Cần merge trước khi remove để đảm bảo entity đang được quản lý
             em.remove(em.merge(user));
             trans.commit();
         } catch (Exception e) {
@@ -90,5 +91,14 @@ public class UserDB {
             em.close();
         }
         return users;
+    }
+    // Lấy một user bằng khóa chính (ID)
+    public static User selectUserById(Long userId) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        try {
+            return em.find(User.class, userId);
+        } finally {
+            em.close();
+        }
     }
 }
