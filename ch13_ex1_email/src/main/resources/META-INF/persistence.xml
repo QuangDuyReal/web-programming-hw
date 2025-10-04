@@ -32,7 +32,7 @@
                 Nó sẽ KHÔNG ảnh hưởng đến các bảng của bài tập cũ.
                 Sau khi bảng đã được tạo, hãy đổi lại thành "validate".
             -->
-            <property name="eclipselink.ddl-generation" value="create-tables"/>
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
         </properties>
     </persistence-unit>
 </persistence>
