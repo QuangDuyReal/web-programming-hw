@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+    <persistence-unit name="emailListPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>murach.business.User</class> <!-- Thêm dòng này để JPA biết về Entity User -->
+        <properties>
+            <!-- Cấu hình kết nối CSDL -->
+            <property name="javax.persistence.jdbc.url" value="${db.url}"/>
+            <property name="javax.persistence.jdbc.user" value="${db.user}"/>
+            <property name="javax.persistence.jdbc.password" value="${db.password}"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+
+            <!-- Cấu hình EclipseLink để tự động tạo bảng -->
+            <!-- 'drop-and-create' sẽ xóa và tạo lại bảng mỗi khi ứng dụng chạy, rất tiện khi dev -->
+            <!-- Khi deploy thật, bạn nên đổi thành 'none' hoặc 'validate' -->
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+        </properties>
+    </persistence-unit>
+</persistence>
