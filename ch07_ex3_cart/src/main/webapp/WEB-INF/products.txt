@@ -1,0 +1,4 @@
+ts-album|Taylor Swift's Album|10.00
+lg-album|Lowg Tournaments|12.00
+sj-album|Super Junior CD Playlist|30.15
+kny-album|Kimetsu no Yaiba - Infinity Castle|120000.00

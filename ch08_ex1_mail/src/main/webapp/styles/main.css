@@ -1,0 +1,95 @@
+/* styles/main.css */
+
+/* Đặt toàn trang nền xanh dương pastel và căn giữa */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #a7c7e7; /* xanh dương pastel */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 40px;
+}
+
+/* Tiêu đề căn giữa */
+h1, h2, p {
+    text-align: center;
+    color: #003366; /* xanh đậm hơn cho chữ */
+}
+
+/* Khung bao quanh form */
+form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px 30px;
+    width: 350px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hiệu ứng khi di chuột vào khung form */
+form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Label */
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    margin-right: 10px;
+    color: #003366;
+    font-weight: bold;
+}
+
+/* Input */
+input[type="email"],
+input[type="text"] {
+    width: 180px;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Nút submit */
+input[type="submit"] {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #357ABD;
+}
+
+/* Căn giữa phần hiển thị thông tin trên thanks.jsp */
+span, .info {
+    display: inline-block;
+    margin-bottom: 5px;
+    align-content: center;
+}
+
+/* Để khung Return button cũng đồng nhất */
+form input[value="Return"] {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form input[value="Return"]:hover {
+    background-color: #357ABD;
+}

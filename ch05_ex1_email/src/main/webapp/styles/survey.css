@@ -1,0 +1,99 @@
+/* === Cài đặt chung cho toàn trang === */
+body {
+    font-family: Arial, sans-serif; /* Chọn font chữ dễ đọc */
+    background-color: #e6f2ff; /* Nền xanh dương nhạt, dịu mắt */
+    margin: 0;
+    padding: 20px;
+    display: flex; /* Dùng flexbox để căn giữa nội dung */
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+/* === Khung chính bao bọc nội dung === */
+main {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px; /* Bo tròn các góc */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ cho hiệu ứng nổi */
+    width: 100%;
+    max-width: 500px; /* Giới hạn chiều rộng tối đa của khung */
+
+    /* --- Hiệu ứng chuyển động --- */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* === Hiệu ứng khi di chuột vào khung === */
+main:hover {
+    transform: translateY(-5px); /* Di chuyển khung lên trên 5px */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Tăng bóng đổ để tạo cảm giác "nâng lên" */
+}
+
+/* === Định dạng các tiêu đề === */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 0;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* === Định dạng Form === */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block; /* Giúp mỗi label và input nằm trên một hàng riêng */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Quan trọng: để padding không làm tăng chiều rộng */
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Màu xanh dương cho nút */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay */
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Đổi màu nút khi di chuột vào */
+}
+
+/* Định dạng cho trang thanks.jsp */
+.info-group {
+    margin-bottom: 15px;
+}
+.info-group span {
+    font-weight: normal;
+    color: #333;
+    margin-left: 10px;
+}
+
+/* Thông báo lỗi */
+.error-message {
+    color: #d93025;
+    font-style: italic;
+    text-align: center;
+}
