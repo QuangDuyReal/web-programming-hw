@@ -1,34 +1,131 @@
-/* The styles for the elements */
+/*======================================================
+  STYLES FOR GENERAL ELEMENTS
+======================================================*/
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 85%;
-    margin-left: 2em;
-    margin-right: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font chữ hiện đại, dễ đọc hơn */
+    font-size: 16px; /* Sử dụng pixel để kích thước nhất quán hơn */
+    background-color: #e0f2f1; /* MÀU XANH PASTEL (Teal nhạt) */
+    color: #333; /* Màu chữ tối để dễ đọc trên nền sáng */
+    margin: 0;
+    padding: 2em; /* Thêm padding thay vì margin để background full trang */
+    display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+    justify-content: center;
+    align-items: flex-start; /* Căn nội dung lên trên cùng */
+    min-height: 100vh; /* Đảm bảo body cao ít nhất bằng chiều cao màn hình */
 }
+
+/* Container để đóng khung và căn giữa mọi thứ */
+.container {
+    background-color: #ffffff; /* Nền trắng cho nội dung chính */
+    padding: 2em;
+    border-radius: 12px; /* Bo góc mềm mại */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho nổi khối */
+    width: 100%;
+    max-width: 900px; /* Giới hạn chiều rộng tối đa cho dễ nhìn */
+}
+
 h1 {
-    font-size: 140%;
-    color: teal;
-    margin-bottom: .5em;
+    font-size: 2em; /* 2em tương đương 32px */
+    color: #00796b; /* Màu Teal đậm hơn để nổi bật */
+    margin-bottom: 1em;
+    text-align: center; /* Căn giữa tiêu đề */
+    border-bottom: 2px solid #b2dfdb; /* Thêm đường gạch chân trang trí */
+    padding-bottom: 0.5em;
 }
+
 br {
     clear: both;
 }
 
-#quantity {
-    width: 2em;
+/*======================================================
+  STYLES FOR FORMS AND INPUTS
+======================================================*/
+form {
+    margin-top: 1.5em;
 }
 
-/* The styles for the tables */
+input[type="submit"], input[type="button"] {
+    background-color: #00796b; /* Màu Teal đậm */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* HIỆU ỨNG NHẸ KHI DI CHUỘT */
+}
+
+/* HIỆU ỨNG KHI DI CHUỘT VÀO NÚT */
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #004d40; /* Màu Teal đậm hơn nữa */
+    transform: translateY(-2px); /* Nhấc nút lên một chút */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 5px rgba(0, 121, 107, 0.5);
+    outline: none;
+}
+
+#quantity {
+    width: 3em;
+    text-align: center;
+}
+
+/* Căn chỉnh các form nằm cạnh nhau (Continue Shopping và Checkout) */
+.form-actions {
+    display: flex;
+    justify-content: space-between; /* Đẩy 2 nút ra 2 phía */
+    margin-top: 2em;
+}
+
+/*======================================================
+  STYLES FOR TABLES
+======================================================*/
 table {
-    border: 1px solid black;
     border-collapse: collapse;
-    width: 50em;
+    width: 100%; /* Chiều rộng 100% của container */
+    margin-top: 1.5em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
+
 th, td {
-    border: 1px solid black;
+    border: 1px solid #ddd; /* Đường kẻ nhạt hơn, hiện đại hơn */
     text-align: left;
-    padding: .5em;
+    padding: 12px; /* Tăng padding cho thoáng */
 }
-.right {
+
+th {
+    background-color: #b2dfdb; /* Màu nền cho tiêu đề bảng */
+    color: #004d40;
+    font-weight: bold;
+}
+
+/* HIỆU ỨNG KHI DI CHUỘT VÀO HÀNG TRONG BẢNG */
+tr:hover {
+    background-color: #f1f8e9; /* Đổi màu nền hàng khi di chuột vào */
+}
+
+/* Căn chỉnh cột giá tiền và số lượng sang phải */
+td:nth-child(3), td:nth-child(4),
+th:nth-child(3), th:nth-child(4) {
+    text-align: right;
+}
+
+/* Căn giữa cột chứa form update/remove */
+td:first-child, td:last-child,
+th:first-child, th:last-child {
+    text-align: center;
+}
+
+.right { /* Class cũ vẫn giữ để tương thích */
     text-align: right;
 }
