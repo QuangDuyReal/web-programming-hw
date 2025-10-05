@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quang Duy - Data Engineering Student</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+<div class="page-container">
+	<!-- === SIDEBAR === -->
+	<aside class="sidebar">
+		<div class="sidebar-header">
+			<!-- VỊ TRÍ 1: AVATAR CỦA BẠN TRONG SIDEBAR -->
+			<a href="#home" class="logo logo-avatar">
+				<img src="images/my-notion-face-portrait.png" alt="Quang Duy Avatar">
+			</a>
+		</div>
+
+		<!-- <div class="sidebar-content"> mới, đã thêm Skills và nút CV -->
+		<div class="sidebar-content">
+			<div class="sidebar-section contact-section">
+				<h3>Contact Me</h3>
+				<p>I'm currently seeking opportunities and am available for freelance work. Let's get in touch!</p>
+				<!-- Nút Tải CV mới -->
+				<a href="cv/NguyenVanQuangDuy_CV.pdf" class="btn" download>
+					Download CV <i class="fa-solid fa-download"></i>
+				</a>
+			</div>
+
+			<!-- Mục Kỹ năng mới -->
+			<div class="sidebar-section skills-section">
+				<h4>Skills</h4>
+				<ul class="skills-list">
+					<li>Java</li>
+					<li>Python</li>
+					<li>SQL</li>
+					<li>Apache Hadoop</li>
+					<li>Apache Kafka</li>
+					<li>AWS</li>
+					<li>Git</li>
+					<li>Docker</li>
+				</ul>
+			</div>
+
+			<div class="social-links">
+				<a href="https://github.com/QuangDuyReal" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+				<a href="https://www.facebook.com/quang.duy.real" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+				<a href="https://www.instagram.com/quangduyreal/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+		</div>
+		<footer class="sidebar-footer">
+			<p>Designed by Quang Duy - Copyright 2025</p>
+		</footer>
+	</aside>
+
+	<!-- === MAIN CONTENT === -->
+	<main class="main-content">
+		<!-- Header for large screens -->
+		<header class="main-header">
+			<a href="#home" class="logo">Quang Duy</a>
+			<nav class="main-nav">
+				<a href="#home">Home</a>
+				<a href="#about">About</a>
+				<a href="#work">Work</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</header>
+		<!-- Header for small screens -->
+		<header class="mobile-header">
+			<a href="#home" class="logo">Quang Duy</a>
+			<button class="menu-toggle" aria-label="Toggle menu">
+				<i class="fas fa-bars"></i>
+			</button>
+		</header>
+
+		<!-- Hero Section -->
+		<section id="home" class="hero">
+			<div class="hero-text">
+				<!-- VỊ TRÍ 2: LOGO TRƯỜNG ĐẠI HỌC -->
+				<div class="hero-heading">
+					<h1>Hi, I'm Nguyen Van Quang Duy</h1>
+					<div class="university-logo">
+						<img src="images/LogoHCMUTE_Whitebackground.png" alt="HCMUTE Logo" title="Ho Chi Minh City University of Technology and Education">
+					</div>
+				</div>
+				<p class="subtitle" style="font-size: 1.2rem; color: var(--text-color); margin-top: -1rem; margin-bottom: 1.5rem;">A third-year Data Engineering student at Ho Chi Minh City University of Technology and Education.</p>
+				<p>As a third-year Data Engineering student, I have a strong passion for data analysis and Big Data technologies like Apache Hadoop and Kafka. I am also eager to explore cloud platforms such as AWS to build scalable data solutions.</p>
+				<a href="mailto:quangduy.real@email.com" class="btn">quangduy.real@email.com <i class="fa-regular fa-envelope"></i></a>
+			</div>
+			<div class="hero-image">
+				<img src="images/portrait.jpg" alt="Nguyen Van Quang Duy">
+			</div>
+		</section>
+
+		<!-- About Me Section -->
+		<section id="about" class="about-me">
+			<h2 style="text-align: center; font-size: 2rem; margin-bottom: 3rem;">A Little More About Me</h2>
+
+			<!-- Bố cục mới: Hàng trên cùng chứa ảnh dọc và text -->
+			<div class="about-top-row">
+				<!-- Vị trí cho ảnh dọc (Vertical) -->
+				<div class="about-image-vertical">
+					<img src="images/fm.jpg" alt="A portrait of Quang Duy">
+				</div>
+
+				<!-- Khối chứa text (giữ nguyên) -->
+				<div class="about-text-content">
+					<div class="about-card" style="background-color: var(--btn-bg-color); padding: 2rem; border-radius: 8px;">
+						<h3>Personality</h3>
+						<p>If one word could describe me, it would be "ambivert." I enjoy a healthy balance between social interaction and quiet, focused time.</p>
+						<br>
+						<h4>My Motto:</h4>
+						<p style="font-style: italic;">"Keep Moving Forward" - Meet The Robinsons</p>
+					</div>
+					<div class="about-card" style="background-color: var(--btn-bg-color); padding: 2rem; border-radius: 8px;">
+						<h3>Hobbies & Interests</h3>
+						<p>I'm deeply interested in Japanese culture, including anime, manga, and finely crafted products. To stay active, I enjoy several sports like badminton, running, and swimming. For me, a great day often starts with a simple breakfast and a cup of coffee.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Hàng dưới: Vị trí cho ảnh ngang (Horizontal) -->
+			<div class="about-image-horizontal">
+				<img src="images/IMG_3736.JPG" alt="Quang Duy in a garden setting">
+			</div>
+
+		</section>
+
+		<!-- ... Các phần còn lại của file HTML giữ nguyên ... -->
+		<!-- Section Featured Work -->
+		<section id="work" class="featured-work">
+			<h2><i class="fa-solid fa-arrow-down"></i> Featured Work</h2>
+			<div class="work-grid">
+				<div class="work-item">
+					<a href="https://quangduy-ch07-ex1.onrender.com/" target="_blank">
+						<img src="images/music.jpeg" alt="Music Download App">
+						<div class="work-item-info">
+							<h4>Music Download App</h4>
+							<p>A web application where users must log in to download their favorite music tracks.</p>
+						</div>
+					</a>
+				</div>
+				<div class="work-item">
+					<span style="color: var(--secondary-text-color);">Coming Soon</span>
+				</div>
+				<div class="work-item">
+					<span style="color: var(--secondary-text-color);">Coming Soon</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section Contact at the bottom -->
+		<section id="contact" class="bottom-contact">
+			<h3>Get In Touch</h3>
+			<p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+			<a href="mailto:quangduy.real@email.com" class="btn">quangduy.real@email.com <i class="fa-regular fa-envelope"></i></a>
+		</section>
+
+		<footer class="main-footer">
+			<p>Designed by Quang Duy - Copyright 2024</p>
+			<div class="social-links-footer">
+				<a href="https://github.com/QuangDuyReal" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+				<a href="https://www.facebook.com/quang.duy.real" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+				<a href="https://www.instagram.com/quangduyreal/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+		</footer>
+
+	</main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
