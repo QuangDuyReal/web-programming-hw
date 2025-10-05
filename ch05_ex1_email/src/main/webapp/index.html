@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Murach's Java Servlets and JSP</title>
+  <!-- 1. Liên kết đến file CSS của bạn -->
+  <link rel="stylesheet" href="styles/survey.css">
+</head>
+<body>
+<!-- 2. Bọc tất cả nội dung trong thẻ <main> để tạo khung -->
+<main>
+  <!-- Phần thông tin cá nhân của bạn -->
+  <img src="murachlogo.jpg" alt="Murach Logo" width="100" style="display: block; margin: 0 auto 10px;">
+  <h2 style="text-align: center; color: #555;">Nguyễn Văn Quang Duy - 23110086</h2>
+  <hr style="margin-bottom: 30px;">
+
+  <!-- Bắt đầu Form khảo sát -->
+  <h1>Survey</h1>
+  <p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
+
+  <form action="emailList" method="post">
+    <!-- 3. Cấu trúc lại từng phần của form -->
+
+    <h2>Your information:</h2>
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input type="text" id="dateOfBirth" name="dateOfBirth">
+
+    <h2>How did you hear about us?</h2>
+    <div>
+      <input type="radio" id="search" name="heardFrom" value="Search Engine" checked>
+      <label for="search" style="display: inline; font-weight: normal;">Search engine</label><br>
+      <input type="radio" id="word" name="heardFrom" value="Word of mouth">
+      <label for="word" style="display: inline; font-weight: normal;">Word of mouth</label><br>
+      <input type="radio" id="other" name="heardFrom" value="Other">
+      <label for="other" style="display: inline; font-weight: normal;">Other</label>
+    </div>
+
+    <h2>Would you like to receive announcements?</h2>
+    <div style="margin-bottom: 15px;">
+      <input type="checkbox" id="updates" name="wantsUpdates" value="YES, I'd like to receive announcements about new CDs and special offers">
+      <label for="updates" style="display: inline; font-weight: normal;">YES, I'd like to receive announcements about new CDs and special offers.</label><br>
+
+      <input type="checkbox" id="emailOK" name="wantsUpdates" value="YES, please send me email announcements.">
+      <label for="emailOK" style="display: inline; font-weight: normal;">YES, please send me email announcements.</label>
+    </div>
+
+    <label for="contactVia">Please contact me by:</label>
+    <select id="contactVia" name="contactVia">
+      <option value="Both" selected>Both</option>
+      <option value="Email">Email</option>
+      <option value="Postal Mail">Postal mail</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+</main>
+</body>
+</html>

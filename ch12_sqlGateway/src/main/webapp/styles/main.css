@@ -1,0 +1,103 @@
+/* --- Cài đặt chung & Nền --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #e3f2fd; /* Nền xanh dương pastel */
+    color: #333;
+    margin: 0;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* --- Container chính để căn giữa mọi thứ --- */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    padding: 2em 3em;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Căn giữa toàn bộ văn bản bên trong */
+}
+
+/* --- Kiểu chữ --- */
+h1 {
+    font-size: 2em;
+    color: #1565c0; /* Xanh dương đậm hơn */
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+/* --- Form & Các thành phần --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /* Khoảng cách giữa textarea và nút */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Đảm bảo padding không làm vỡ layout */
+    resize: vertical; /* Chỉ cho phép thay đổi chiều cao */
+}
+
+input[type="submit"] {
+    background-color: #1976d2; /* Màu nút chính */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+    align-self: center; /* Căn giữa nút trong form */
+    width: 200px;
+}
+
+/* --- Hiệu ứng Hover --- */
+input[type="submit"]:hover {
+    background-color: #1565c0; /* Màu đậm hơn khi di chuột vào */
+    transform: translateY(-2px); /* Hiệu ứng nhấc nhẹ lên */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Bảng kết quả --- */
+.result-container {
+    margin-top: 2em;
+    text-align: left; /* Căn lề trái cho nội dung bảng */
+    overflow-x: auto; /* Thêm thanh cuộn ngang nếu bảng quá rộng */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Tô màu xen kẽ cho các hàng */
+}

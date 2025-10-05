@@ -1,0 +1,54 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management</title>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/main.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>User Management</h1>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="user" items="${users}">
+      <tr>
+        <td>${user.firstName} ${user.lastName}</td>
+        <td>${user.email}</td>
+        <td>
+          <form action="${pageContext.request.contextPath}/admin/users" method="post">
+            <input type="hidden" name="action" value="display_user_for_edit">
+            <input type="hidden" name="userId" value="${user.userId}">
+            <input type="submit" value="Edit" class="edit-button">
+          </form>
+        </td>
+        <td>
+          <form action="${pageContext.request.contextPath}/admin/users" method="post">
+            <input type="hidden" name="action" value="delete_user">
+            <input type="hidden" name="userId" value="${user.userId}">
+            <input type="submit" value="Delete" class="delete-button">
+          </form>
+        </td>
+      </tr>
+    </c:forEach>
+    </tbody>
+  </table>
+
+  <p><a href="${pageContext.request.contextPath}/">Back to Join Page</a></p>
+
+  <p class="footer-credit">Nguyen Van Quang Duy - 23110086</p>
+</div>
+
+</body>
+</html>

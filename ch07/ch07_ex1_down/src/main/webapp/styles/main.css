@@ -1,0 +1,169 @@
+/* =============================================
+   BIẾN MÀU VÀ CÀI ĐẶT CHUNG (CSS VARIABLES)
+   ============================================= */
+:root {
+    --bg-color: #eaf4f4;         /* Màu nền xanh dương pastel */
+    --primary-color: #6b9ac4;    /* Màu nhấn chính */
+    --card-bg-color: #ffffff;     /* Màu nền của khung (card) */
+    --text-color: #333;           /* Màu chữ chính */
+    --border-color: #dce9f4;      /* Màu viền */
+    --shadow-color: rgba(0, 0, 0, 0.08); /* Màu của bóng đổ */
+    --link-color: #0077b6;         /* Màu của đường link */
+    --link-hover-color: #023e8a;   /* Màu link khi di chuột vào */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition-speed: 0.3s;
+}
+
+/* =============================================
+   THIẾT LẬP CƠ BẢN
+   ============================================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+body {
+    max-width: 960px; /* Giảm độ rộng một chút cho cân đối hơn */
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+    font-weight: bold;
+}
+
+a:hover, a:focus {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center; /* Căn giữa các tiêu đề */
+}
+
+/* =============================================
+   KHUNG (CARD) VÀ HIỆU ỨNG CHUYỂN ĐỘNG
+   ============================================= */
+.card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform var(--transition-speed) ease-in-out,
+    box-shadow var(--transition-speed) ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+/* =============================================
+   FORM ĐĂNG KÝ (YÊU CẦU MỚI)
+   ============================================= */
+.form-centered {
+    display: flex;
+    flex-direction: column; /* Xếp các thành phần theo chiều dọc */
+    align-items: center;   /* Căn giữa theo chiều ngang */
+    gap: 1rem;             /* Khoảng cách giữa các dòng */
+    margin-top: 1rem;
+}
+
+.form-centered label {
+    font-weight: bold;
+}
+
+.form-centered input[type="text"],
+.form-centered input[type="email"] {
+    width: 300px; /* Độ rộng cố định cho đẹp */
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-centered input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.form-centered input[type="submit"]:hover {
+    background-color: var(--link-hover-color);
+}
+
+/* =============================================
+   BẢNG (YÊU CẦU MỚI)
+   ============================================= */
+table {
+    width: 80%; /* Chiều rộng của bảng */
+    margin: 1.5rem auto; /* Tự động căn giữa bảng */
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #f2f8fd; /* Màu nền cho tiêu đề bảng */
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fcff; /* Hiệu ứng sọc cho bảng */
+}
+
+tr:hover {
+    background-color: #eaf4f4; /* Hiệu ứng khi di chuột qua hàng */
+}
+
+
+/* =============================================
+   RESPONSIVE CHO MÀN HÌNH NHỎ
+   ============================================= */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .form-centered input[type="text"],
+    .form-centered input[type="email"] {
+        width: 100%; /* Cho input chiếm toàn bộ chiều rộng trên di động */
+    }
+
+    table {
+        width: 100%;
+    }
+}
