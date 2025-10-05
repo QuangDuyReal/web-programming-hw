@@ -601,3 +601,86 @@ THIẾT KẾ ĐÁP ỨNG (RESPONSIVE MEDIA QUERIES)
         gap: 2rem;
     }
 }
+
+/* ======================================= */
+/* === GÓI HIỆU ỨNG NÂNG CAO === */
+/* ======================================= */
+
+/* 1. HIỆU ỨNG "FADE IN & SLIDE UP" KHI CUỘN TRANG */
+/* ------------------------------------------------ */
+
+/* Ẩn các section mặc định */
+.about-me, .featured-work, .uni-life-section, .bottom-contact {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Khi có class .visible, section sẽ hiện ra */
+.about-me.visible, .featured-work.visible, .uni-life-section.visible, .bottom-contact.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 2. HIỆU ỨNG "SPOTLIGHT" THEO CON TRỎ CHUỘT */
+/* ------------------------------------------------ */
+.spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 60%);
+    pointer-events: none; /* Cho phép click xuyên qua vầng sáng */
+    z-index: 9999;
+    transition: transform 0.1s ease-out; /* Làm vầng sáng di chuyển mượt hơn */
+    display: none; /* Mặc định ẩn, chỉ hiện trên màn hình lớn */
+}
+
+/* Chỉ bật hiệu ứng spotlight trên desktop để tránh ảnh hưởng hiệu năng mobile */
+@media (min-width: 1024px) {
+    .spotlight {
+        display: block;
+    }
+}
+
+
+/* 3. HIỆU ỨNG "NỔI BẬT" KHI HOVER */
+/* ------------------------------------------------ */
+.skills-list li, .work-item, .about-card, .uni-life-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover, .work-item:hover, .about-card:hover, .uni-life-card:hover {
+    transform: translateY(-5px); /* Nâng phần tử lên một chút */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ */
+}
+
+
+/* 4. HIỆU ỨNG "THỞ" CHO ẢNH ĐẠI DIỆN */
+/* ------------------------------------------------ */
+.hero-image {
+    animation: breathing 5s ease-in-out infinite;
+}
+
+@keyframes breathing {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* Tối ưu: Tắt hiệu ứng cho người dùng yêu cầu giảm chuyển động (tính năng trợ năng) */
+@media (prefers-reduced-motion: reduce) {
+    .hero-image, .about-me, .featured-work, .uni-life-section, .bottom-contact {
+        animation: none;
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+    .skills-list li:hover, .work-item:hover, .about-card:hover, .uni-life-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
